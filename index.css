@@ -10,8 +10,9 @@
   background-image: url(./img.svg);
   background-size: cover;
   /* background-repeat: no-repeat; */
-  padding: 40px;
-  overflow: hidden;
+  padding: 50px 200px;
+
+  /* overflow: hidden; */
 }
 
 .header {
@@ -49,7 +50,18 @@ h1 {
 }
 
 .scrool {
-  /* margin-top: 100px; */
+  margin-top: 150px;
   display: flex;
   justify-content: space-between;
+}
+.src {
+  width: 50px;
+  height: 100px;
+  position: relative;
+  top: 20px;
+
+}
+.scrool p {
+  display: flex;
+  flex-wrap: wrap;
 }
