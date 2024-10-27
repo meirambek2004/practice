@@ -7,7 +7,7 @@
 .container {
   width: 100%;
   height: 100%;
-  background-image: url(./img.svg);
+  background-image: url(./first-image/img.svg);
   background-size: cover;
   padding: 50px 200px;
 }
@@ -70,7 +70,7 @@
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px 50px 500px 200px;
+  grid-template-rows: 100px 50px 600px 200px;
   gap: 15px;
 }
 
@@ -79,7 +79,6 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
-
   grid-column: 1 / span 2;
 }
 .zagolovok {
@@ -93,7 +92,7 @@
   margin-left: 200px;
 }
 .inform {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   grid-column: 1 / span 1;
   margin-left: 200px;
   margin-top: 50px;
@@ -110,7 +109,7 @@
   width: 50px;
   height: 50px;
   position: relative;
-  top: -210px;
+  top: -224px;
   left: 143px;
   background-color: #011627;
   /* box-shadow: ; */
@@ -149,18 +148,25 @@
   width: 100px;
   height: 100px;
   position: relative;
-  top: -10px;
-  left: 470px;
+  left: 400px;
 }
 .share-it {
   width: 100px;
   position: relative;
-  left: 470px;
+  left: 400px;
   top: 50px;
 }
-
-@media (max-width: 556px) {
+.line-2 {
+  transform: rotate(180deg);
+  position: relative;
+  left: 115px;
+  top: -90px;
+}
+@media screen and (max-width: 1280px) {
   .second-page {
-    background: red;
+    width: 1200px;
+  }
+  .container {
+    width: 1200px;
   }
 }
