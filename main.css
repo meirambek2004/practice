@@ -1,21 +1,44 @@
+@font-face {
+  font-family: "Playfair";
+  src: url(./PlayfairDisplaySC-Bold.ttf);
+  /* font-family: "raleway";
+  src: url(./Raleway-Medium.ttf); */
+}
+@font-face {
+  font-family: "raleway";
+  src: url(./Raleway-Medium.ttf);
+}
+@font-face {
+  font-family: "Anton";
+  src: url(./Anton-Regular.ttf);
+}
+@font-face {
+  font-family: "Inter";
+  src: url(./Inter-VariableFont_opsz\wght.ttf);
+}
+@font-face {
+  font-family: "Gowun";
+  src: url(./GowunDodum-Regular.ttf);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: #ffffff;
+  font-family: "raleway";
 }
 .container {
   width: 100%;
   height: 100%;
   background-image: url(./first-image/img.svg);
   background-size: cover;
-  padding: 50px 200px;
 }
 
 .header-1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 50px 200px;
 }
 
 .navigation {
@@ -27,7 +50,6 @@
   height: 50px;
   border: 1px solid black;
   border-radius: 30%;
-
   background: #00c9e0;
 }
 .main {
@@ -39,18 +61,21 @@
   gap: 20px;
 }
 .main h1 {
+  font-family: "Playfair";
   font-size: 70px;
 }
 .main p {
   text-align: center;
   width: 400px;
   font-size: 10px;
+  font-family: "raleway";
 }
 
 .scrool {
   margin-top: 200px;
   display: flex;
   justify-content: space-between;
+  padding: 5px 200px;
 }
 .scr {
   transform: rotate(180deg);
@@ -63,9 +88,20 @@
   display: flex;
   transform: rotate(90deg);
 }
+.foot {
+  height: 100px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(1, 22, 39, 0.8),
+    #011627
+  );
+}
 
 .second-page {
-  background: linear-gradient(#011627 0%, #011627 77%, #011627 100%);
+  background-color: #011627;
+  background-image: url(./second-images/backgroun-img.svg);
+  background-size: cover;
   width: 100%;
   height: 100%;
   display: grid;
@@ -80,6 +116,10 @@
   align-items: center;
   gap: 30px;
   grid-column: 1 / span 2;
+}
+.header h1 {
+  font-size: 30px;
+  font-family: "Anton";
 }
 .zagolovok {
   grid-column: 1 / span 3;
@@ -97,6 +137,8 @@
   margin-left: 200px;
   margin-top: 50px;
   z-index: 1;
+  font-weight: bold;
+  font-family: "Inter";
 }
 
 .dots {
@@ -126,6 +168,7 @@
 }
 .Chill-Adventure {
   width: 400px;
+  height: 700px;
   grid-column: 2 / span 1;
   display: flex;
   flex-direction: column;
@@ -134,6 +177,9 @@
   position: relative;
   top: 100px;
   left: 60px;
+}
+.Chill-Adventure h1 {
+  font-size: 50px;
 }
 .offer {
   background-color: #00c9e0;
@@ -162,11 +208,85 @@
   left: 115px;
   top: -90px;
 }
+
+.third-page {
+  display: grid;
+  background-color: #011627;
+
+  background-image: url(./second-images/backgroun-img.svg),
+    url(./third-images/backgroun-img.svg);
+
+  background-size: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 600px 500px;
+  position: relative;
+}
+
+.first {
+  width: 290px;
+  height: 600px;
+  grid-column: 1 / span 1;
+  /* border: 2px solid black; */
+  position: absolute;
+  left: 200px;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.first h1 {
+  font-size: 50px;
+}
+.first p {
+  font-family: "Gowun";
+}
+.second {
+  grid-column: 2 / span 2;
+  /* border: 2px solid black; */
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  max-height: 800px;
+  position: absolute;
+  left: -150px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.second img {
+  width: 50%;
+}
+
+.martin-jack {
+  position: absolute;
+  left: 320px;
+  top: 200px;
+  z-index: 1;
+}
+.dots-3 {
+  position: absolute;
+  right: 70px;
+  top: 200px;
+}
+.read-more {
+  background-color: #00c9e0;
+  position: absolute;
+  /* top: 350px; */
+  bottom: 170px;
+  left: 5px;
+  width: 200px;
+  height: 50px;
+  border-radius: 183px;
+}
+
 @media screen and (max-width: 1280px) {
   .second-page {
     width: 1200px;
   }
   .container {
+    width: 1200px;
+  }
+  .third-page {
     width: 1200px;
   }
 }
