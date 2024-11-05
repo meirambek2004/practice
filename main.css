@@ -1,25 +1,8 @@
 @font-face {
-  font-family: "Playfair";
-  src: url(./PlayfairDisplaySC-Bold.ttf);
-  /* font-family: "raleway";
-  src: url(./Raleway-Medium.ttf); */
-}
-@font-face {
   font-family: "raleway";
   src: url(./Raleway-Medium.ttf);
 }
-@font-face {
-  font-family: "Anton";
-  src: url(./Anton-Regular.ttf);
-}
-@font-face {
-  font-family: "Inter";
-  src: url(./Inter-VariableFont_opsz\wght.ttf);
-}
-@font-face {
-  font-family: "Gowun";
-  src: url(./GowunDodum-Regular.ttf);
-}
+
 * {
   margin: 0;
   padding: 0;
@@ -212,10 +195,8 @@
 .third-page {
   display: grid;
   background-color: #011627;
-
   background-image: url(./second-images/backgroun-img.svg),
     url(./third-images/backgroun-img.svg);
-
   background-size: 100%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 600px 500px;
@@ -279,6 +260,126 @@
   border-radius: 183px;
 }
 
+.four-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8),
+    rgba(1, 22, 39, 1),
+    #011627
+  );
+}
+.fon {
+  width: 90%;
+  background-color: #011627;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  bottom: 150px;
+}
+.header-4 {
+  padding-top: 50px;
+  width: 100%;
+  text-align: center;
+}
+.testimonials {
+  width: 100%;
+  height: 800px;
+  padding-top: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-content: center;
+  justify-content: center;
+}
+.testimonial {
+  background: #02223b;
+  width: 450px;
+  height: 450px;
+  padding: 40px;
+  font-size: 18px;
+  line-height: 30px;
+}
+.testimonial p {
+  position: relative;
+  left: 45px;
+  bottom: 30px;
+  width: 300px;
+}
+.girl {
+  padding-top: 10px;
+  display: flex;
+  gap: 10px;
+  position: relative;
+  left: 45px;
+  top: -15px;
+}
+.girl p {
+  position: relative;
+  left: 15px;
+  bottom: -13px;
+  font-size: 15px;
+}
+.see-u {
+  width: 100%;
+  text-align: center;
+}
+.see-u h2 {
+  padding-top: 250px;
+  font-size: 50px;
+}
+.line-4 {
+  padding-top: 80px;
+  width: 100%;
+  background: #011627;
+  text-align: center;
+}
+.footer {
+  width: 100%;
+  background-color: #011627;
+  display: flex;
+  justify-content: space-evenly;
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.Events {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.Contact {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.follow {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.Copyright {
+  width: 100%;
+  height: 200px;
+  background: #011627;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
 @media screen and (max-width: 1280px) {
   .second-page {
     width: 1200px;
