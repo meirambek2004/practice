@@ -87,32 +87,32 @@
   background-size: cover;
   width: 100%;
   height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px 50px 600px 200px;
-  gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .header {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-left: 200px;
+
   align-items: center;
   gap: 30px;
-  grid-column: 1 / span 2;
 }
 .header h1 {
   font-size: 30px;
   font-family: "Anton";
 }
 .zagolovok {
-  grid-column: 1 / span 3;
   border-bottom: 1px solid #41ead4;
   display: flex;
   padding-left: 20px;
   justify-content: space-around;
-  align-items: center;
+  width: 80%;
   margin-right: 200px;
   margin-left: 200px;
+  padding-top: 50px;
 }
 .inform {
   /* border: 2px solid black; */
@@ -126,7 +126,7 @@
 
 .dots {
   position: relative;
-  top: -175px;
+  top: -155px;
   left: -35px;
   z-index: -1;
 }
@@ -134,7 +134,7 @@
   width: 50px;
   height: 50px;
   position: relative;
-  top: -224px;
+  top: -205px;
   left: 143px;
   background-color: #011627;
   /* box-shadow: ; */
@@ -142,7 +142,7 @@
 .line {
   position: relative;
   top: -300px;
-  left: -60px;
+  right: 460px;
 }
 .grand {
   position: relative;
@@ -180,7 +180,7 @@
   left: 400px;
 }
 .share-it {
-  width: 100px;
+  width: 80px;
   position: relative;
   left: 400px;
   top: 50px;
@@ -193,67 +193,66 @@
 }
 
 .third-page {
-  display: grid;
+  display: flex;
   background-color: #011627;
   background-image: url(./second-images/backgroun-img.svg),
     url(./third-images/backgroun-img.svg);
   background-size: 100%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 600px 500px;
   position: relative;
+  flex-wrap: wrap;
+  padding: 50px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  width: 100%;
 }
 
 .first {
   width: 290px;
   height: 600px;
-  grid-column: 1 / span 1;
   /* border: 2px solid black; */
-  position: absolute;
-  left: 200px;
-  top: 50px;
   display: flex;
   flex-direction: column;
   gap: 30px;
+  align-items: flex-start;
 }
+
 .first h1 {
   font-size: 50px;
 }
-.first p {
-  font-family: "Gowun";
-}
+
 .second {
-  grid-column: 2 / span 2;
-  /* border: 2px solid black; */
-  width: 100%;
   height: 100%;
+  /* border: 2px solid black; */
   max-width: 800px;
   max-height: 800px;
-  position: absolute;
-  left: -150px;
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 200px;
 }
+
 .second img {
-  width: 50%;
+  width: 45%;
 }
 
 .martin-jack {
-  position: absolute;
-  left: 320px;
-  top: 200px;
-  z-index: 1;
+  display: none;
 }
+
 .dots-3 {
-  position: absolute;
-  right: 70px;
-  top: 200px;
+  display: flex;
+  width: 6%;
+  position: relative;
+  right: 80px;
+  top: 100px;
 }
+
 .read-more {
   background-color: #00c9e0;
-  position: absolute;
-  /* top: 350px; */
-  bottom: 170px;
+  position: relative;
+  bottom: 0px;
   left: 5px;
   width: 200px;
   height: 50px;
@@ -289,7 +288,7 @@
 }
 .testimonials {
   width: 100%;
-  height: 800px;
+
   padding-top: 200px;
   display: flex;
   flex-wrap: wrap;
@@ -325,7 +324,9 @@
   bottom: -13px;
   font-size: 15px;
 }
+
 .see-u {
+  height: 100%;
   width: 100%;
   text-align: center;
 }
@@ -334,11 +335,13 @@
   font-size: 50px;
 }
 .line-4 {
+  height: 100%;
   padding-top: 80px;
-  width: 100%;
+
   background: #011627;
   text-align: center;
 }
+
 .footer {
   width: 100%;
   background-color: #011627;
@@ -380,14 +383,219 @@
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 1280px) {
-  .second-page {
-    width: 1200px;
+@media screen and (max-width: 556px) {
+  .container,
+  .second-page,
+  .third-page,
+  .four-page,
+  .footer,
+  .Copyright {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
   }
-  .container {
-    width: 1200px;
+  .header-1 h1,
+  .scr {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: -100px;
+  }
+  .main p {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .scr p {
+    width: 1px;
+    position: absolute;
+    bottom: -10px;
+  }
+  .navigation {
+    display: flex;
+    position: relative;
+    right: -40px;
+  }
+  .soc-icon1 {
+    display: flex;
+    position: relative;
+    right: -100px;
+    top: -35px;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding: 10px;
+  }
+  .header p {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+  }
+  .header span {
+    display: none;
+  }
+  .inform img {
+    width: 100%;
+    position: relative;
+    right: 150px;
+  }
+
+  .line {
+    display: flex;
+    position: relative;
+    top: -100px;
+    left: -200px;
+    width: 5px;
+    height: 8px;
+  }
+  .grand {
+    display: flex;
+    position: relative;
+    font-size: 10px;
+    top: -95px;
+    left: -160px;
+  }
+  .vector {
+    display: none;
+  }
+  .vector img {
+    display: none;
+  }
+  .zagolovok {
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  .dots {
+    position: relative;
+    top: -185px;
+    left: -180px;
+    width: 5%;
+  }
+  .Chill-Adventure {
+    position: relative;
+    top: -80px;
+    left: 15px;
+    width: 100%;
+    height: 100%;
+  }
+  .Chill-Adventure h1 {
+    width: 200px;
+  }
+  .Chill-Adventure p {
+    width: 70%;
+    font-size: 30px;
+  }
+  .offer {
+    position: relative;
+    bottom: -80px;
+    width: 300px;
+    height: 90px;
+    border-radius: 183px;
+    font-size: 20px;
+  }
+
+  .second-social {
+    position: relative;
+    top: 130px;
+    left: 150px;
+  }
+  .share-it {
+    font-size: 5px;
+    display: flex;
+    position: relative;
+    top: 200px;
+    left: 140px;
+  }
+  .line-2 {
+    width: 350px;
+    position: relative;
+    left: -90px;
+    top: 30px;
   }
   .third-page {
-    width: 1200px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .first {
+    font-size: 30px;
+    position: relative;
+    left: 15px;
+    display: flex;
+    gap: 20px;
+  }
+  .read-more {
+    /* top: -30px; */
+    display: block;
+    width: 250px;
+    height: 80px;
+    font-size: 20px;
+    position: absolute;
+    bottom: -200px;
+  }
+  .second {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    left: 15px;
+    top: 150px;
+    padding-top: 100px;
+  }
+
+  .martin-jack {
+    display: none;
+  }
+  .dots-3 {
+    display: none;
+  }
+  .fon {
+    width: 100%;
+    display: block;
+    position: relative;
+    top: 0;
+  }
+  .testimonials {
+    width: 100%;
+    display: flex;
+    position: relative;
+    top: -100px;
+    height: 100%;
+  }
+  .testimonial {
+    height: 100%;
+    position: relative;
+    width: 90%;
+    padding: 5px;
+  }
+  .testimonial p {
+    width: 70%;
+  }
+  .girl p {
+    width: 50%;
+  }
+  .see-u,
+  .line-4 {
+    position: relative;
+    top: -150px;
+    height: 100%;
+  }
+  .footer {
+    display: flex;
+    font-size: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .Copyright {
+    display: flex;
   }
 }
